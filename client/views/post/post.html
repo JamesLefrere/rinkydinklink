@@ -1,0 +1,22 @@
+<template name="post">
+  <article class="post post-{{type}}">
+    <div class="content">
+      {{#if url}}
+      <a href="{{url}}">{{body}}</a>
+      {{else}}
+      {{post.body}}
+      {{/if}}
+    </div>
+    <div class="tags">
+      <h3>Tags</h3>
+      {{post.tags}}
+    </div>
+  </article>
+  <div class="comments">
+    <h2>Comments</h2>
+    {{> _addComment}}
+    {{#each comments}}
+      {{> _comment}}
+    {{/each}}
+  </div>
+</template>
