@@ -1,0 +1,15 @@
+<head>
+  <title>Rinky Dink Link</title>
+</head>
+
+<template name="layout">
+  <div class="page">
+    <header class="header">
+      <a href="/" class="logo">RinkyDinkLink!</a>
+      {{> loginButtons}}
+    </header>
+    <main class="main">
+      {{> yield}}
+    </main>
+  </div>
+</template>

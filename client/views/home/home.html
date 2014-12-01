@@ -1,0 +1,10 @@
+<template name="home">
+  <h1>Rinky Dink Link</h1>
+  <section class="posts">
+    <h2>Posts</h2>
+    {{#each posts}}
+      {{> _postTeaser}}
+    {{/each}}
+  </section>
+  {{> _addPost}}
+</template>
