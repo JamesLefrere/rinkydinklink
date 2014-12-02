@@ -10,7 +10,6 @@ aldeed:simple-schema
 aldeed:collection2
 accounts-password
 accounts-ui
-copleykj:jquery-autosize
 reactive-var
 less
 raix:handlebar-helpers

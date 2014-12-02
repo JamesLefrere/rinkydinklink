@@ -3,7 +3,6 @@ Template._addPost.created = ->
   @type.set "Short post"
 
 Template._addPost.rendered = ->
-  $("#body").autosize()
 
 Template._addPost.helpers
   type: ->

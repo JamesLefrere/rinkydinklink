@@ -1,5 +1,4 @@
 Template._addComment.rendered = ->
-  $("#comment").autosize()
 
 Template._addComment.events
   "submit #add-comment": (e, t) ->
