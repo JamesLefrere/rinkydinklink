@@ -3,6 +3,13 @@ Template._addPost.created = ->
   @type.set "Short post"
 
 Template._addPost.rendered = ->
+  users = Meteor.users.find({}, fields: username: 1).fetch()
+  $("#body-fake").atwho(
+    at: "@"
+    data: _.map(users, (user) ->
+      user.username
+    )
+  )
 
 Template._addPost.helpers
   type: ->
