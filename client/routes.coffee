@@ -9,9 +9,15 @@ Router.map ->
   @route "home",
     path: "/"
     data:
-      posts: Posts.find()
+      posts: Posts.find(
+        {}
+      ,
+        sort:
+          points: -1
+          date: -1
+      )
     waitOn: ->
-      Meteor.subscribe "posts"
+      Meteor.subscribe "topPosts"
 
   @route "post",
     path: "l/:_id"
