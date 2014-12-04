@@ -1,5 +1,18 @@
-Meteor.publish "posts", ->
-  return Posts.find()
+Meteor.publish "topPosts", ->
+  return Posts.find(
+    {},
+    limit: 25
+    sort:
+      points: -1
+      date: -1
+    fields:
+      content: 1
+      tags: 1
+      username: 1
+      points: 1
+      upvoters: 1
+      downvoters: 1
+  )
 
 Meteor.publish "post", (postId) ->
   check postId, String
