@@ -12,7 +12,8 @@ accounts-password
 accounts-ui
 reactive-var
 less
-raix:handlebar-helpers
 underscore
-jameslefrere:atjs
+mizzao:autocomplete
+copleykj:jquery-autosize
+momentjs:moment
 
