@@ -29,3 +29,10 @@ Router.map ->
         Meteor.subscribe("post", @params._id),
         Meteor.subscribe("comments", @params._id)
       ]
+
+    @route "user",
+      path: "@:username"
+      data: ->
+        user: Users.findOne(username: @params.username)
+      waitOn: ->
+        Meteor.subscribe("user", @params.username)
