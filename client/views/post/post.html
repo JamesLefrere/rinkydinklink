@@ -1,10 +1,14 @@
 <template name="post">
-  <article class="post post-{{type}}">
+  <article class="post post-{{post.type}}">
     <div class="content">
-      {{#if url}}
-      <a href="{{url}}">{{body}}</a>
+      {{#if post.url}}
+      <a href="{{post.url}}">{{post.content}}</a>
       {{else}}
-      {{post.body}}
+        {{#if post.longContent}}
+        {{post.longContent}}
+        {{else}}
+        {{post.content}}
+        {{/if}}
       {{/if}}
     </div>
     <div class="tags">

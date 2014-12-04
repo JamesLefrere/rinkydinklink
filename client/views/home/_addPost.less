@@ -1,15 +1,36 @@
-.field-body {
-  position: relative;
+.field-content {
+  border: 1px #ddd solid;
+  padding: 1.5rem;
+  &:focus {
+    border-color: blue;
+  }
 }
 
-#body-fake {
-  outline: 1px #ddd solid;
-  min-height: 100px;
-  width: 300px;
-  padding: 0.5em;
-  &:focus {
-    outline: 2px blue solid;
+#add-post {
+  margin-bottom: 1rem;
+}
+
+#content {
+  width: 100%;
+  min-height: 2rem;
+  padding: 0;
+  resize: none !important;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.field-attached {
+  background: #ddd;
+  padding: 0 0.5rem;
+  .submit {
+    float: right;
   }
+}
+
+#chars {
+  font-size: 0.6rem;
+  display: inline;
 }
 
 .tag {

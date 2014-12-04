@@ -1,8 +1,19 @@
 <template name="_postTeaser">
   <div class="post-teaser">
-    {{#linkTo route="post"}}Link{{/linkTo}}<br>
+    <div class="voting">
+      <div class="vote up{{#if upvoted}} active{{/if}}">&#9650;</div>
+      <div class="vote down{{#if downvoted}} active{{/if}}">&#9660;</div>
+    </div>
     <div class="content">
-      {{body}}
+      {{#if url}}
+      <a href="{{url}}">{{content}}</a>
+      {{else}}
+      {{content}}
+      {{/if}}
+      {{#linkTo route="post"}}&rarr;{{/linkTo}}
+    </div>
+    <div class="info">
+      {{points}}, {{#linkTo route="user"}}@{{username}}{{/linkTo}}, {{timeAgo}}
     </div>
   </div>
 </template>
